@@ -7,12 +7,12 @@
         }
     
     body{
-    background-color: lightsteelblue;
+    background-color:rgb(0, 174, 239);
     font-family: 'Forma';
 }
 /* how the page wrapper will appear on mobile */
 .page-wrapper{
-    width: min(100% - 3rem, 80ch);
+    width: min(100% - 3rem, 90ch);
     margin-inline: auto;
 }
 /* how the page wrapper appears on desktop */
@@ -28,21 +28,23 @@ grid-template-areas:
     "a a";
 }
 
-.history {
+#history {
 grid-area: h;
+background-color: rgb(236, 0, 130);
 }
 
-.variations{
+#variations{
 grid-area: v;
 }
 
-.alphabet {
+#alphabet {
 grid-area: a;
+background-color: rgb(7, 253, 89);
 }
 }
 /* CSS for the footer */
 footer{
-    background-color: rgb(7, 180, 253);
+    background-color: rgb(7, 253, 89);
 }
 
 /* variable font animation */
