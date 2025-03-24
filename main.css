@@ -3,13 +3,68 @@
          url("fonts/FormaDJRVariable[opsz\,slnt\,wdth\,wght]-Edu.woff2") format("woff2");
         font-family: 'Forma';
         font-style: normal;
-        font-weight: normal;
+        font-weight: 100 900;
         }
     
     body{
     background-color:rgb(0, 174, 239);
     font-family: 'Forma';
 }
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .hero h3 {
+    font-size: 100px; 
+    font-weight: 900;
+    color: white;
+}
+
+.hero h4 {
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+}
+  
+  .hero .triangles {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem; 
+    margin-top: 3rem;
+  }
+  
+  .hero .triangles svg {
+    width: 80%; 
+    height: auto;
+  }
+
+  .hero h3 {
+    position: absolute; 
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
+    color: white; 
+    white-space: nowrap;
+}
+
+.hero h4 {
+    position: absolute; 
+    top: 55%; 
+    left: 71%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
+    color: white; 
+    white-space: nowrap;
+}
+
+.italic {
+    font-style: italic;
+}
+
 /* how the page wrapper will appear on mobile */
 .page-wrapper{
     width: min(100% - 3rem, 90ch);
@@ -19,41 +74,135 @@
 
 @media only screen and (min-width:800px){
 .page-wrapper{
-display: grid;
+display:contents;
 grid-gap: 25px;
 grid-template-columns: 1fr 1fr;
 grid-template-rows: auto;
-grid-template-areas: 
-    "h v"
-    "a a";
 }
 
 #history {
 grid-area: h;
 background-color: rgb(236, 0, 130);
+padding-bottom: 1rem;
+padding-top: 1rem;
+}
+
+#history h1 {
+    font-size: 80px;
+    font-weight: 800;
+    color: rgb(255, 242, 0);
+    margin-left: 1rem;
+    margin-bottom: 0rem;
+    margin-top: 1rem;
+}
+
+#history p {
+    font-size: 30px;
+    font-weight: 300;
+    color: white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0;
+
+}
+
+.colors {
+    display: grid;
+    grid-template-columns: repeat(4, 0fr); /* Create a responsive grid */
+}
+
+.white-box {
+    width: 318px; /* Set the size of each box */
+    height: 318px;
+    background-color: white; /* Initial color */
+    border: 1px solid white;
+    animation: color-change 3s steps(1, start) infinite; /* Apply the animation */
+   
+}
+
+/* Animation to change color */
+@keyframes color-change {
+    10% {
+        background-color: var(--start-color, none);
+    }
+    60% {
+        background-color: var(--mid-color, none);
+    }
+    100% {
+        background-color: var(--end-color, none);
+    }
+}
+
+/* Assign unique colors to each box */
+.white-box:nth-child(1) {
+    --start-color: rgb(236, 0, 130);
+    --mid-color: rgb(255, 242, 0);
+    --end-color: rgb(7, 253, 89);
+
+}
+
+.white-box:nth-child(2) {
+    --start-color: rgb(0, 174, 239);
+    --mid-color: rgb(236, 0, 130);
+    --end-color: rgb(255, 242, 0);
+    
+}
+
+.white-box:nth-child(3) {
+    --start-color: rgb(255, 242, 0);
+    --mid-color: rgb(7, 253, 89);
+    --end-color: rgb(0, 174, 239);
+    
+}
+
+.white-box:nth-child(4) {
+    --start-color: rgb(7, 253, 89);
+    --mid-color: rgb(236, 0, 130);
+    --end-color: rgb(255, 242, 0);
+   
+}
+
+.white-box:nth-child(5) {
+    --start-color: rgb(236, 0, 130);
+    --mid-color: rgb(0, 174, 239);
+    --end-color: rgb(255, 242, 0);
+    
+}
+
+.white-box:nth-child(6) {
+    --start-color: rgb(0, 174, 239);
+    --mid-color: rgb(7, 253, 89);
+    --end-color: rgb(236, 0, 130);
+   
+}
+
+.white-box:nth-child(7) {
+    --start-color: rgb(255, 242, 0);
+    --mid-color: rgb(236, 0, 130);
+    --end-color: rgb(0, 174, 239);
+    
+}
+
+.white-box:nth-child(8) {
+    --start-color: rgb(7, 253, 89);
+    --mid-color: rgb(255, 242, 0);
+    --end-color: rgb(236, 0, 130);
+   
 }
 
 #variations{
-grid-area: v;
+background-color: rgb(7, 253, 89);
+padding-top: 1rem;
+padding-bottom: 1rem;
 }
 
-#alphabet {
-grid-area: a;
-background-color: rgb(7, 253, 89);
-}
+
 }
 /* CSS for the footer */
 footer{
-    background-color: rgb(7, 253, 89);
+    background-color:rgb(0, 174, 239);
 }
 
-/* variable font animation */
-h3{
-    font-weight:20; 
-    text-align: center;
-    font-size: 5em;
-    animation: weightChange 7s infinite;
-}
 
 @keyframes weightChange {
     0%, 100%{
@@ -61,8 +210,63 @@ h3{
     }
     50%{font-variation-settings: "opsz" 72, "wdth" 100, "wght" 900, "slnt" -13;
     }
-    
 }
+
+/* animations for varitation section */
+.weight{
+    animation: weightVariations 5s infinite;
+
+}
+@keyframes weightVariations {
+    0%, 100%{
+        font-variation-settings: "opsz" 8, "wdth" 100, "wght" 100, "slnt" 0;
+    }
+    50%{font-variation-settings: "opsz" 72, "wdth" 100, "wght" 900, "slnt" 0;
+    }
+}
+.width{
+    animation: widthVariations 5s infinite;
+}
+@keyframes widthVariations {
+    0%, 100%{
+        font-variation-settings: "opsz" 8, "wdth" 100, "wght" 0, "slnt" 0;
+    }
+    50%{font-variation-settings: "opsz" 72, "wdth" 900, "wght" 0, "slnt" 0;
+    }
+}
+.slant{
+    animation: slantVariations 5s infinite;
+}
+@keyframes slantVariations {
+    0%, 100%{
+        font-variation-settings: "opsz" 8, "wdth" 0, "wght" 0, "slnt" 0;
+    }
+    50%{font-variation-settings: "opsz" 72, "wdth" 0, "wght" 0, "slnt" -13;
+    }
+}
+
+h2{
+    position: relative;
+    text-align: center;
+    font-size: 60px;
+    margin-top: 1rem;
+}
+
+p{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+}
+
+h5{
+    font-size: 40px;
+    text-align: center;
+    margin: 0%;
+   
+}
+
+
+
 /* variable font that changes on hover */
 .variable-font{
     font-weight:1 ;
