@@ -116,8 +116,72 @@ padding-top: 1rem;
     height: 318px;
     background-color: white; /* Initial color */
     border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Forma'; 
+    font-size: 15rem;
     animation: color-change 3s steps(1, start) infinite; /* Apply the animation */
-   
+
+}
+
+.white-box:nth-child(1),
+.white-box:nth-child(3),
+.white-box:nth-child(6) {
+    animation: font-weight-change 5s infinite, color-change 3s steps(1,start) infinite;
+
+}
+
+@keyframes font-weight-change {
+    0% {
+        font-variation-settings: "wght" 100, "wdth" 100, "slnt" 0;
+    }
+    50%{
+        font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0;
+    }
+    100% {
+        font-variation-settings: "wght" 900, "wdth" 100, "slnt" 0;
+    }
+    }
+
+.white-box:nth-child(2),
+.white-box:nth-child(4),
+.white-box:nth-child(7) {
+    animation: font-slant-change 5s infinite, color-change 3s steps(1, start) infinite;
+
+}
+
+@keyframes font-slant-change {
+    0% {
+        font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0;
+
+    }
+    50% {
+        font-variation-settings: "wght" 400, "wdth" 100, "slnt" -13;
+    }
+    100% {
+        font-variation-settings: "wght" 400, "wdth" 100, "slnt" -20;
+    }
+}
+
+.white-box:nth-child(5),
+.white-box:nth-child(8) {
+    animation: font-width-change 5s infinite, color-change 3s steps(1, start) infinite;
+
+}
+
+@keyframes font-width-change {
+    0% {
+        font-variation-settings: "wght" 400, "wdth" 50, "slnt" 0;
+
+    }
+    50% {
+        font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0;
+
+    }
+    100% {
+        font-variation-settings: "wght" 400, "wdth" 900, "slnt" 0;
+    }
 }
 
 /* Animation to change color */
@@ -197,13 +261,6 @@ padding-bottom: 1rem;
 }
 
 
-}
-/* CSS for the footer */
-footer{
-    background-color:rgb(0, 174, 239);
-}
-
-
 @keyframes weightChange {
     0%, 100%{
         font-variation-settings: "opsz" 8, "wdth" 50, "wght" 100, "slnt" 0;
@@ -249,23 +306,35 @@ h2{
     position: relative;
     text-align: center;
     font-size: 60px;
-    margin-top: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-p{
+#variations p {
+    margin-bottom: 1rem;
+    margin-top: 0;
     position: relative;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
 }
 
-h5{
-    font-size: 40px;
+.axes-container{
+    display:flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.axes-container h5 {
+    font-size: 50px;
+    margin: 0;
     text-align: center;
-    margin: 0%;
-   
 }
 
-
+}
+/* CSS for the footer */
+footer{
+    background-color:rgb(0, 174, 239);
+}
 
 /* variable font that changes on hover */
 .variable-font{
