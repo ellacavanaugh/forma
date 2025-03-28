@@ -112,7 +112,7 @@ padding-top: 3rem;
 
 .colors {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Create a responsive grid */
+    grid-template-columns: repeat(4, 1fr); 
     grid-template-rows: repeat(2, 1fr);
     width: 100vw;
     height: 100vh;
@@ -123,14 +123,14 @@ padding-top: 3rem;
 }
 
 .white-box {
-    background-color: white; /* Initial color */
+    background-color: white; 
     border: 1px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Forma'; 
     font-size: 15rem;
-    animation: color-change 3s steps(1, start) infinite; /* Apply the animation */
+    animation: color-change 3s steps(1, start) infinite; 
     box-sizing: border-box;
 
 }
@@ -194,7 +194,7 @@ padding-top: 3rem;
     }
 }
 
-/* Animation to change color */
+
 @keyframes color-change {
     10% {
         background-color: var(--start-color, none);
@@ -207,7 +207,7 @@ padding-top: 3rem;
     }
 }
 
-/* Assign unique colors to each box */
+
 .white-box:nth-child(1) {
     --start-color: rgb(236, 0, 130);
     --mid-color: rgb(255, 242, 0);
@@ -279,7 +279,7 @@ padding-bottom: 1rem;
     }
 }
 
-/* animations for varitation section */
+
 .weight{
     animation: weightVariations 5s infinite;
 
@@ -402,7 +402,7 @@ h3 {
    
 }
 
-/* CSS for the footer */
+
 footer{
     background-color:rgb(0, 174, 239);
     display: flex;
